@@ -1,0 +1,142 @@
+/********** GENERAL STYLES **********/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f8fa;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #1f5d81;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/********** HEADER **********/
+
+header {
+  background-color: #990000;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  font-size: 20px;
+  padding: 15px;
+}
+
+/********** MAIN **********/
+
+main {
+  display: grid; 
+  grid-template-areas: 
+    "menu input"
+    "menu howls";
+  gap: 10px;
+  max-width: 500px;
+  margin: 0 auto;
+  grid-template-columns: auto 1fr; 
+}
+
+/********** BACK TO TOP **********/
+
+#top {
+  visibility: hidden;
+  position: absolute;
+}
+
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #990000;
+  padding: 15px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+
+/********** NAVIGATION **********/
+
+nav {
+  background-color: rgba(0, 0, 255, 0.1);
+  grid-area: menu;
+  padding: 15px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav ul li {
+  padding: 5px;
+  border-bottom: 1px solid #000;
+}
+nav ul li:last-of-type {
+  border-bottom: none;
+}
+
+/********** INPUT **********/
+
+#howl-input {
+  background-color: #fff;
+  border-radius: 10px;
+  grid-area: input;
+  padding: 20px;
+
+  display: flex;
+	flex-direction: column;
+	align-items: stretch;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+#howl-input button {
+  align-self: flex-end;
+  border: 2px solid #990000;
+  color: #990000;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 10px 20px;
+}
+
+/********** HOWLS **********/
+
+#howl-list {
+  background-color: rgba(255, 255, 0, 0.1);
+  grid-area: howls;
+}
+
+.howl {
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.howl .user {
+  font-weight: bold;
+}
+
+.howl .actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px
+
+}
+
+/********** FOOTER **********/
+
+
+footer {
+  background-color: rgba(0, 0, 255, 0.1);
+}
